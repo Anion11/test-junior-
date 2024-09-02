@@ -1,26 +1,24 @@
-.about{ 
-
-
-  &-history{
+.about {
+  &-history {
     margin-top: rem(120px);
 
     @media #{media('<',d)} {
       margin-top: rem(48px);
     }
 
-    &__wrapper{
+    &__wrapper {
       @media #{media('<',m)} {
-        border-bottom: 1px solid #E4E4E4;
+        border-bottom: 1px solid #e4e4e4;
       }
     }
 
-    &__btns{
+    &__btns {
       margin-top: rem(80px);
       display: flex;
       align-items: start;
       gap: rem(60px);
 
-      border-bottom: 1px solid #E4E4E4;
+      border-bottom: 1px solid #e4e4e4;
 
       @media #{media('<',d)} {
         margin-top: rem(24px);
@@ -38,23 +36,23 @@
         padding-left: rem(16px);
         padding-right: rem(16px);
       }
-
     }
 
-    &__btn{
+    &__btn {
       padding-bottom: rem(12px);
       transition: $transition;
       cursor: pointer;
       color: #747884;
 
+      @media #{media('>',t)} and (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: #0070b8;
+        }
+      }
 
-      @media #{media('>',t)} and (hover: hover) and (pointer: fine) {&:hover {
-        color: #0070B8;
-      }}
-
-      &.active{
-        border-bottom: 4px solid #0070B8;
-        color: #0070B8;
+      &.active {
+        border-bottom: 4px solid #0070b8;
+        color: #0070b8;
         font-weight: 600;
         padding-bottom: rem(8px);
 
@@ -62,7 +60,7 @@
           border-width: 2px;
           padding-bottom: rem(10px);
         }
-        @media #{media('<',m)} {  
+        @media #{media('<',m)} {
           border-width: 3px;
         }
       }
@@ -73,7 +71,7 @@
       }
     }
 
-    &__sliders{
+    &__sliders {
       margin-top: rem(60px);
       display: flex;
       align-items: start;
@@ -86,8 +84,8 @@
       }
     }
 
-    &__col{
-      &.years{
+    &__col {
+      &.years {
         width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
         display: flex;
         flex-direction: column;
@@ -99,13 +97,13 @@
           flex-direction: row;
           width: 100%;
 
-          .swiper{
+          .swiper {
             width: rem(200px);
           }
         }
       }
 
-      &.images{
+      &.images {
         width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
         height: rem(458px);
 
@@ -120,10 +118,9 @@
         }
       }
 
-      &.texts{
-
+      &.texts {
         width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
-        margin-left:  calc(#{$col-part-d} * 1);
+        margin-left: calc(#{$col-part-d} * 1);
         height: rem(458px);
 
         @media #{media('<',d)} {
@@ -133,7 +130,7 @@
           margin-left: 0px;
         }
 
-        .swiper-slide{
+        .swiper-slide {
           display: flex;
           flex-direction: column;
           justify-content: end;
@@ -146,11 +143,11 @@
       }
     }
 
-    &__images{
+    &__images {
       border-radius: rem(20px);
       overflow: hidden;
 
-      &-slide{
+      &-slide {
         height: rem(458px);
 
         @media #{media('<',d)} {
@@ -164,28 +161,29 @@
       }
     }
 
-    &__texts{
+    &__texts {
+      transition: height 0.3s;
       @media #{media('<',d)} {
         overflow: hidden;
       }
-      &-paragraph{
+      &-paragraph {
         margin-top: rem(20px);
 
-        &:empty{
+        &:empty {
           margin-top: 0px;
         }
       }
     }
   }
 
-  &-next{
+  &-next {
     margin-top: rem(120px);
 
     @media #{media('<',d)} {
       margin-top: rem(48px);
     }
 
-    &__links{
+    &__links {
       margin-top: rem(60px);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -197,12 +195,12 @@
         gap: rem(12px);
       }
 
-      .hover-border{
+      .hover-border {
         width: 100%;
 
-        &:hover{
-          .next-page__icon_gradient{
-            &::after{
+        &:hover {
+          .next-page__icon_gradient {
+            &::after {
               opacity: 0;
             }
           }
@@ -211,10 +209,9 @@
     }
   }
 
-
-  &__minititle{
+  &__minititle {
     @media #{media('<',d)} {
       line-height: 100%;
     }
   }
-}     
+}

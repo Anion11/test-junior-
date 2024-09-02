@@ -67,22 +67,22 @@ block content
     section.about-history.container 
       h3.about-history__title.title-60 История 
       .about-history__wrapper 
-        .about-history__btns 
-          .about-history__btn.text-32.active(data-history-btn) 1991
-          .about-history__btn.text-32(data-history-btn) 2001
-          .about-history__btn.text-32(data-history-btn) 2007
-          .about-history__btn.text-32(data-history-btn) 2010
-          .about-history__btn.text-32(data-history-btn) 2011
-          .about-history__btn.text-32(data-history-btn) 2014
-          .about-history__btn.text-32(data-history-btn) 2015
-          .about-history__btn.text-32(data-history-btn) 2016
-          .about-history__btn.text-32(data-history-btn) 2017
-          .about-history__btn.text-32(data-history-btn) 2020
-          .about-history__btn.text-32(data-history-btn) 2022
+        .about-history__btns(data-swiper-tabs='test')
+          .about-history__btn.text-32.active(data-swiper-tab) 1991
+          .about-history__btn.text-32(data-swiper-tab) 2001
+          .about-history__btn.text-32(data-swiper-tab) 2007
+          .about-history__btn.text-32(data-swiper-tab) 2010
+          .about-history__btn.text-32(data-swiper-tab) 2011
+          .about-history__btn.text-32(data-swiper-tab) 2014
+          .about-history__btn.text-32(data-swiper-tab) 2015
+          .about-history__btn.text-32(data-swiper-tab) 2016
+          .about-history__btn.text-32(data-swiper-tab) 2017
+          .about-history__btn.text-32(data-swiper-tab) 2020
+          .about-history__btn.text-32(data-swiper-tab) 2022
       .about-history__sliders 
         .about-history__col.years 
           .about-history__years 
-            .swiper(data-slider-id='history-years'  data-slider-prev='1' data-slider-next='2') 
+            .swiper(data-slider-id='history-years' data-slider-prev='1' data-slider-next='2' data-slider-tabs='test') 
               .swiper-wrapper 
                 each item in ['1991', '2001', '2007', '2010', '2011', '2014', '2015', '2016', '2017', '2020', '2022']
                   .swiper-slide 
@@ -91,7 +91,7 @@ block content
             +slider-buttons-gradient(1, 2)
         .about-history__col.images
           .about-history__images
-            .swiper(data-slider-id='history-images'  data-slider-prev='1' data-slider-next='2') 
+            .swiper(data-slider-id='history-images'  data-slider-prev='1' data-slider-next='2' data-slider-tabs='test') 
               .swiper-wrapper 
                 each item in ['about-history-slide1.png', 'about-history-slide2.png', 'about-history-slide3.png', 'about-history-slide4.png', 'about-history-slide5.png', 'about-history-slide6.png', 'about-history-slide7.png', 'about-history-slide8.png', 'about-history-slide9.png', 'about-history-slide10.png', 'about-history-slide11.png']
                   .swiper-slide 
@@ -99,7 +99,7 @@ block content
                       +picture(item)
         .about-history__col.texts
           .about-history__texts(data-history-texts) 
-            .swiper(data-slider-id='history-texts'  data-slider-prev='1' data-slider-next='2')  
+            .swiper(data-slider-id='history-texts'  data-slider-prev='1' data-slider-next='2' data-slider-tabs='test')  
               .swiper-wrapper
                 each item in historyTextItems
                   .swiper-slide 
