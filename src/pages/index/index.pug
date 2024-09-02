@@ -1,0 +1,24 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageTitle = 'Index'
+
+block content
+  main
+    -
+      var pages = [
+        {
+          name: "Swiper",
+          href: "./swiper-page"
+        },
+        {
+          name: "Ya-Maps",
+          href: "./test-map"
+        },
+    
+      ]
+    .page-listing
+      each item in pages
+        .page-listing__item
+          +button(item.name).button--blue(href=item.href)

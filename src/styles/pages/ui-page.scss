@@ -1,0 +1,13 @@
+.ui-page {
+}
+
+.page-listing{
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+  margin-top: rem(200px);
+  padding: 0px rem(50px);
+  &__item{
+    width: rem(200px);
+  }
+}

@@ -1,0 +1,6 @@
+mixin textarea
+  .input-wrapper(data-input-parent='').textarea-wrapper
+    .input-wrapper__placeholder
+      |#{attributes.placeholder}
+    textarea.textarea(data-input='')&attributes(attributes)
+    +reset.input-wrapper-svg.textarea__svg

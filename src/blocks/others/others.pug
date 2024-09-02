@@ -1,0 +1,10 @@
+mixin search-block(container)
+
+  .search-block(class=allMods)&attributes(attributes)
+    form.search-block__form(action="")
+      if (container)
+        +search-input("Введите название", container)(required='').form-input.wide
+      else 
+        +search-input("Введите название",'projects-search')(required='').form-input.wide
+      +search-submit-btn.wide.blue
+      #searchFormError

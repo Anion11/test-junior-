@@ -1,0 +1,81 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::placeholder {
+    @content;
+  }
+}
+
+@mixin fsl($font-size, $line-height: null) {
+  font-size: unquote('#{calc($font-size / $fs)}rem');
+  @if $line-height {
+    line-height: $line-height / 100%;
+  }
+}
+
+@mixin f-main($font-weight: 700) {
+  font-weight: $font-weight;
+  font-family: $ff-primary;
+}
+
+@mixin scrollbar-hidden() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin styled-scrollbar($scrollbar-bg: #eef1f3, $size: 6px) {
+  scrollbar-track-color: $scrollbar-bg;
+  scrollbar-darkshadow-color: $scrollbar-bg;
+  scrollbar-3dlight-color: $scrollbar-bg;
+
+  scrollbar-arrow-color: color(green);
+
+  scrollbar-highlight-color: color(green);
+  scrollbar-shadow-color: color(green);
+  scrollbar-face-color: color(green);
+
+  // firefox
+
+  scrollbar-width: thin;
+  scrollbar-color: color(green) $scrollbar-bg;
+
+  // chrome, edge, opera, safari
+
+  &::-webkit-scrollbar {
+    width: $size;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-bg;
+  }
+  &::-webkit-scrollbar-thumb {
+    // margin: 4px 0;
+
+    background-color: color(green);
+  }
+}
+
+@mixin cropText($lineCount) {
+  display: -moz-box;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: $lineCount;
+  line-clamp: $lineCount;
+}

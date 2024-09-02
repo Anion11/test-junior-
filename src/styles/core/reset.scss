@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1;
+  scroll-behavior: smooth;
+
+  &.lock-scroll {
+    position: relative;
+    overflow: hidden;
+
+    body {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+span,
+ul,
+ol,
+li,
+tr,
+td,
+th,
+table,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: $font;
+
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .inner {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    @media #{media('<',l)} {
+      max-width: 100%;
+    }
+
+    @media #{media('<',m)} {
+      padding: 0 10px;
+    }
+  }
+
+  main {
+    flex: 1 0;
+  }
+}
+
+svg {
+  transition: $transition;
+
+  path {
+    transition: $transition;
+  }
+}

@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'TT Rounds Neue';
+  font-style: normal;
+  font-weight: 620;
+  font-display: swap;
+  src: url('../fonts/ttroundsneue-demibold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TT Rounds Neue';
+  font-style: normal;
+  font-weight: 420;
+  font-display: swap;
+  src: url('../fonts/ttroundsneue-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/ttfirsneue-demibold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ttfirsneue-regular.woff') format('woff');
+}
+
+
+
+.title-150 {
+  font-weight: 600;
+  @include fsl(150px, 100%);
+  @media #{media("<")} {
+    @include fsl(40px);
+  }
+  letter-spacing: -0.04em;
+}
+
+.title-90 {
+  font-weight: 600;
+  @include fsl(90px, 100%);
+
+  @media #{media('<',d)} {
+    font-size: rem(40px);
+    line-height: rem(40px);
+    letter-spacing: -0.04em;
+  }
+
+  @media #{media("<", m)} { 
+    @include fsl(32px);
+  }
+  letter-spacing: -0.04em;
+}
+
+.title-60 {
+  font-weight: 600;
+  @include fsl(60px, 100%);
+  
+  @media #{media("<")} {
+    font-size: rem(24px);
+    line-height: rem(28.8px);
+  }
+  letter-spacing: -0.04em;
+}
+
+.title-48 {
+  font-weight: 600;
+  @include fsl(48px, 120%);
+  @media #{media("<")} {
+    @include fsl(24px);
+  }
+  letter-spacing: -0.02em;
+}
+
+.title-32 {
+  font-weight: 600;
+  @include fsl(32px, 120%);
+  @media #{media("<")} {
+    @include fsl(20px);
+  }
+  letter-spacing: -0.02em;
+}
+
+.title-24 {
+  font-weight: 600;
+  @include fsl(24px, 100%);
+  
+  @media #{media("<", m)} {
+    @include fsl(16px);
+  }
+  letter-spacing: -0.01em;
+}
+
+.title-20 {
+  font-weight: 600;
+  @include fsl(20px, 100%);
+  @media #{media("<")} {
+    @include fsl(14px);
+  }
+  letter-spacing: -0.01em;
+}
+
+.text-48{
+  font-family: TT Firs Neue;
+
+  font-size: rem(48px);
+  font-weight: 400;
+  line-height: rem(67.2px);
+  letter-spacing: -0.01em;
+  text-align: left;
+
+  @media #{media('<',d)} {
+    font-size: rem(24px);
+    line-height: rem(28.8px);
+    letter-spacing: -0.04em;
+  }
+}
+
+.text-32 {
+  font-family: TT Firs Neue;
+  @include fsl(32px, 140%);
+  letter-spacing: -0.01em;
+  @media #{media("<")} {
+    @include fsl(20px);
+  }
+}
+
+.text-24 {
+  font-family: TT Firs Neue;
+  @include fsl(24px, 160%);
+  letter-spacing: -0.01em;
+
+
+  @media #{media("<")} {
+    @include fsl(18px);
+  }
+}
+
+.text-20 {
+  font-family: TT Firs Neue;
+  @include fsl(20px, 160%);
+  letter-spacing: -0.01em;
+
+
+
+  @media #{media("<")} {
+    @include fsl(16px);
+  }
+}
+
+.text-16 {
+  font-family: TT Firs Neue;
+  @include fsl(16px, 140%);
+  letter-spacing: -0.01em;
+  @media #{media("<")} {
+    @include fsl(15px);
+  }
+}
+
+.text-14{
+  font-family: TT Firs Neue;
+  font-family: TT Firs Neue;
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: rem(16.8px);
+  letter-spacing: -0.01em;
+  text-align: left;
+
+}
+
+
+.grey-text{
+  
+  color: rgba(116, 120, 132, 1);
+}
+
+
+.fw-600{
+  font-weight: 600;
+}
+
+
+span{
+  &.blue-span{
+    color: #0070B8;
+  }
+}
+
+
+.html5-video-player{
+  width: 100% !important;
+  height: 100% !important;
+  video{
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

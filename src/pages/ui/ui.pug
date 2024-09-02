@@ -1,0 +1,32 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageName = 'ui'
+    const pageTitle = 'ui'
+
+block content
+  main
+    .inner
+      h1.title-64 H1 класс title-64
+      h2.title-36 H2 класс title-36
+      br
+      br
+      p.text-18  text-18
+      p.text-22  text-22
+      br
+      br
+      +select(['Мужской','Женский'])(placeholder='Пол')
+      br
+      br
+      +button("Кнопка")
+      br
+      br
+      +checkbox("текст")
+      br
+      br
+      +textarea(placeholder='Имя', name='name')
+      br
+      br
+      +picture("test.jpg",true)
+    

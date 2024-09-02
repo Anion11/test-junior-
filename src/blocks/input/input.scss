@@ -1,0 +1,138 @@
+.input-wrapper {
+  $comp: &;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  &.textarea-wrapper {
+    .input-wrapper-svg {
+      top: rem(4px);
+      right: rem(10px);
+    }
+  }
+
+  &-svg {
+    display: none;
+    position: absolute;
+    top: rem(6px);
+    right: rem(10px);
+    cursor: pointer;
+    width: rem(48px);
+    height: rem(48px);
+    svg {
+      width: rem(18px);
+      height: rem(18px);
+    }
+
+    path {
+      transition: $transition;
+      stroke: #62215b;
+      opacity: 0.6;
+    }
+
+    &:hover {
+      path {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    left: rem(24px);
+    top: rem(21px);
+    transform-origin: left top;
+    transition: $transition;
+    pointer-events: none;
+    color: var(--1, #62215b);
+    font-size: rem(16px);
+    font-weight: 420;
+    line-height: 110%; /* 17.6px */
+    text-transform: uppercase;
+    opacity: 0.6;
+
+    &.custom-map {
+      top: rem(20px);
+      left: rem(68px);
+
+      white-space: nowrap;
+
+      @media #{media('<', m)} {
+        display: none;
+        left: rem(44px);
+        top: rem(17px);
+        line-height: 130%;
+      }
+    }
+  }
+
+  &:focus-within,
+  &.filled {
+    #{$comp}__placeholder {
+      top: rem(12px);
+      transform: scale(0.6);
+    }
+
+    .input-wrapper-svg {
+      display: block;
+    }
+  }
+
+  &.custom-map {
+    &:focus-within,
+    &.filled {
+      #{$comp}__placeholder {
+        top: rem(6px);
+        transform: scale(0.6);
+      }
+    }
+  }
+}
+
+.input {
+  &-dark {
+    background: #f8f4f8;
+    border: 1px solid var(--unnamed, #f0e7ef);
+  }
+
+  width: 100%;
+  height: rem(60px);
+  caret-color: #62215b;
+  border-radius: rem(8px);
+  border: 1px solid var(--unnamed, #f0e7ef);
+  background: #f8f4f8;
+  transition: $transition;
+  color: var(--unnamed, #62215b);
+  font-size: rem(16px);
+  font-weight: 420;
+  line-height: 110%;
+  padding: rem(29px) rem(62px) rem(22px) rem(24px);
+  caret-width: 1px;
+
+  &::placeholder {
+    opacity: 0;
+  }
+
+  &:focus {
+    border: 1px solid var(--1, #62215b);
+    box-shadow: 0px rem(10px) rem(16px) rgba(0, 0, 0, 0.05);
+  }
+
+  &_placeholder {
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+.parsley-errors-list {
+  margin-top: rem(6px);
+  color: #e62929;
+  font-size: rem(10px);
+  font-weight: 420;
+  line-height: 110%;
+  text-transform: uppercase;
+  @media #{media('<',d)} {
+    font-size: rem(8px);
+  }
+}

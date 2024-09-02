@@ -1,0 +1,119 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageName = 'swiper-page'
+    const pageTitle = 'swiper-page'
+    const historyTextItems = [
+      {
+        title: 'Основание Hangzhou Specialized Pump Factory',
+        firstText: 'В августе 1991 года было основано предприятие Hangzhou Specialized Pump Factory. Чуть позже на нём было успешно запущено первое в Китае производство центробежных насосов из нержавеющей стали, изготовленных методом штамповки и сварки.',
+        secondText: '',
+      },
+      {
+        title: 'Развитие международных поставок',
+        firstText: 'Поставив целью стать производителем насосного оборудования №1 в Китае, компания реализовала несколько крупных национальных проектов, а также начинала активно развивать зарубежные поставки.',
+        secondText: '',
+      },
+      {
+        title: 'National Torch Project',
+        firstText: 'Компания приняла участие в программе по развитию высокотехнологичных отраслей промышленности в Китае National Torch Project, благодаря чему стала одной из самых влиятельных компании на рынке промышленного оборудования. ',
+        secondText: '',
+      },
+      {
+        title: 'Регистрация на Шэньчжэньской фондовой бирже',
+        firstText: '9 декабря 2010 компания была успешно зарегистрирована на Шэньчжэньской фондовой бирже, Shenzhen Stock Exchange.',
+        secondText: '',
+      },
+      {
+        title: '',
+        firstText: 'Официально переименованная в Nanfang Pump Industry Co., Ltd, компания вышла на рынок промышленных насосов крупного и среднего размера. ',
+        secondText: 'В этом же году положено начало совместного сотрудничества с «TSURUMI Japan», а также создан научно-исследовательский центр в объединении с Чжэцзянским университетом. ',
+      },
+      {
+        title: 'Nanfeng Foundary',
+        firstText: 'Выручка от продаж достигла 1 миллиарда юаней.',
+        secondText: 'Компания запустила собственное крупномасштабное литейное производство Nanfeng Foundary и создала базу по производству крупных промышленных насосов для различных применений в г. Чанша. ',
+      },
+      {
+        title: 'Официальное торговое представительство компании CNP в России',
+        firstText: 'Создано официальное торгового представительство компании CNP в России. ',
+        secondText: 'Компания начала активное развитие в сфере защиты окружающей среды, сосредоточившись на повышении энергоэффективности производимого оборудования. Получен сертификат национального технологического центра.',
+      },
+      {
+        title: 'Испытания и сертификация новых электродвигателей',
+        firstText: 'Компания была переименована в Nanfang Zhongjin Environment Co., Ltd. Высокоэффективные электродвигатели собственной разработки успешно прошли испытания и сертификацию. ',
+        secondText: '',
+      },
+      {
+        title: 'Выпущен новый насос',
+        firstText: 'Объем продаж на рынке насосного оборудования достиг 2,3 млрд юайней.',
+        secondText: 'Выпущен вертикальный многоступенчатый центробежный насос нового поколения CDM(F), показатели энергоэффективности которого соответствуют долгосрочным целевым требованиям ЕС (MEI≥0.7).',
+      },
+      {
+        title: 'Автоматизированное производство Industry 4.0',
+        firstText: 'Открыто автоматизированное производство по принципам Industry 4.0.',
+        secondText: 'Выручка от продаж превысила 4 млрд юаней, а общее количество ежегодно производимых насосных агрегатов перешагнуло за отметку в 800 000 штук. ',
+      },
+      {
+        title: 'Обширная дилерская сеть в России',
+        firstText: 'Компания становится победителем в номинации "China Machinery Industry Top 100" в течение пяти лет подряд.',
+        secondText: 'Российское представительство выходит в лидеры среди зарубежных дочерних структур компании по обороту продаж. На территории России развёрнута обширная дилерская сеть, открыты склады и сертифицированные сервисные центры по всей стране.',
+      },
+    ]
+
+block content
+  main
+    section.about-history.container 
+      h3.about-history__title.title-60 История 
+      .about-history__wrapper 
+        .about-history__btns 
+          .about-history__btn.text-32.active(data-history-btn) 1991
+          .about-history__btn.text-32(data-history-btn) 2001
+          .about-history__btn.text-32(data-history-btn) 2007
+          .about-history__btn.text-32(data-history-btn) 2010
+          .about-history__btn.text-32(data-history-btn) 2011
+          .about-history__btn.text-32(data-history-btn) 2014
+          .about-history__btn.text-32(data-history-btn) 2015
+          .about-history__btn.text-32(data-history-btn) 2016
+          .about-history__btn.text-32(data-history-btn) 2017
+          .about-history__btn.text-32(data-history-btn) 2020
+          .about-history__btn.text-32(data-history-btn) 2022
+      .about-history__sliders 
+        .about-history__col.years 
+          .about-history__years 
+            .swiper(data-slider-id='history-years'  data-slider-prev='1' data-slider-next='2') 
+              .swiper-wrapper 
+                each item in ['1991', '2001', '2007', '2010', '2011', '2014', '2015', '2016', '2017', '2020', '2022']
+                  .swiper-slide 
+                    .about-history__years-slide.title-150=item
+          .about-history__controls
+            +slider-buttons-gradient(1, 2)
+        .about-history__col.images
+          .about-history__images
+            .swiper(data-slider-id='history-images'  data-slider-prev='1' data-slider-next='2') 
+              .swiper-wrapper 
+                each item in ['about-history-slide1.png', 'about-history-slide2.png', 'about-history-slide3.png', 'about-history-slide4.png', 'about-history-slide5.png', 'about-history-slide6.png', 'about-history-slide7.png', 'about-history-slide8.png', 'about-history-slide9.png', 'about-history-slide10.png', 'about-history-slide11.png']
+                  .swiper-slide 
+                    .about-history__images-slide
+                      +picture(item)
+        .about-history__col.texts
+          .about-history__texts(data-history-texts) 
+            .swiper(data-slider-id='history-texts'  data-slider-prev='1' data-slider-next='2')  
+              .swiper-wrapper
+                each item in historyTextItems
+                  .swiper-slide 
+                    .about-history__texts-slide 
+                      p.about-history__texts-title.title-32 #{item.title}
+                      p.about-history__texts-paragraph.text-20 #{item.firstText}
+                      p.about-history__texts-paragraph.text-20 #{item.secondText}
+    section.about-next.container 
+      .about-next__inner.section-line
+        p.about__minititle.text-20.fw-600 Далее 
+        .about-next__links
+          +hover-gradient-border
+            +next-page-link('Производство')
+          +hover-gradient-border
+            +next-page-link('Карьера')
+          +hover-gradient-border
+            +next-page-link('Наша команда')

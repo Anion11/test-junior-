@@ -1,0 +1,66 @@
+//Для добавления мобильной версии картинки добавляем вторым параметром true
+//Например +picture('image.jpg', 'true')
+//Миксин будет искать картинку с названием image-mob.jpg (тоесть вторая картинка должна иметь такое же название как и основная, только с добавлением -mob.png/jpg и тд)
+
+
+
+mixin picture(fileName, isMobileFileName)
+  -
+    var file = {
+      getTitle(filename) {
+        var segments = filename.split('.');
+        segments.pop();
+        return segments.join('.');
+      },
+      getExtension(filename) {
+        return filename.split('.').pop();
+      },
+      getPath(title, extension) {
+        return `../../images/${title}.${extension}`;
+      },
+    };
+    var fileTitle = file.getTitle(fileName);
+    var fileExtension = file.getExtension(fileName);
+
+  picture.picture&attributes(attributes)
+    source(
+      type="image/webp"
+      srcset=`${file.getPath(fileTitle, "webp")} 1x`
+      alt=fileName
+      class="lazyload" 
+    )
+    source(
+      srcset=`${file.getPath(fileTitle, "jpg")} 1x`
+      alt=fileName
+      class="lazyload" 
+    )
+    source(
+      srcset=`${file.getPath(fileTitle, "png")} 1x`
+      alt=fileName
+      class="lazyload" 
+    )
+    if isMobileFileName
+      source(
+        type="image/webp"
+        srcset=`${file.getPath(fileTitle + '-mob', "webp")} 1x`
+        alt=fileName
+        class="lazyload" 
+        media="(max-width: 768px)"  
+      )
+      source(
+        srcset=`${file.getPath(fileTitle + '-mob', "jpg")} 1x`
+        alt=fileName
+        class="lazyload" 
+        media="(max-width: 768px)" 
+      )
+      source(
+        srcset=`${file.getPath(fileTitle + '-mob', "png")} 1x`
+        alt=fileName
+        class="lazyload" 
+        media="(max-width: 768px)" 
+      )
+    img.picture__img(
+      class="lazyload" 
+      data-src=`${file.getPath(fileTitle, fileExtension)}`
+      alt=fileName
+    )

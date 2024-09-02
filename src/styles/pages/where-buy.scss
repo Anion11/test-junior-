@@ -1,0 +1,47 @@
+.map{
+  margin-top: 250px;
+  &-wrapper{
+      display: flex;
+      width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+      height: rem(745px);
+      &__marks{
+          width: calc(#{$col-part-d} * 3);
+          padding: rem(12px);
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 0px;
+          &-list{
+              position: relative;
+              
+              height: 100%;
+              overflow: scroll;
+              transition: 0.5s;
+              @include styled-scrollbar(#fff);
+              &::before{
+                  content: "";
+                  display: block;
+                  width: calc(100%);
+                  border-top: 1px solid #CACACA;
+                  position: sticky;
+                  top: 0;
+              }
+              &::after{
+                  content: "";
+                  display: block;
+                  width: calc(100%);
+                  border-top: 1px solid #CACACA;
+                  position: sticky;
+                  bottom:  0;
+              }
+          }
+      }
+      &__map{
+          width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+      }
+  }
+}
+
+#map{
+  width: 100%;
+  height: 100%;
+}

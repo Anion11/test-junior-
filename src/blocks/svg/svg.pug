@@ -1,0 +1,57 @@
+mixin reset
+  svg(class=attributes.class xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 48 48' fill='none')
+    path(d='M18.15 18.15L29.85 29.85' stroke='#A5B7B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M18.15 29.85L29.85 18.15' stroke='#A5B7B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+mixin tick 
+  svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8' stroke='#62215B' stroke-width='2' stroke-linecap='round')
+mixin arrow-bottom
+  svg(width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M16 17L11 22M11 22L6 17M11 22L11 10C11 8.93913 11.4214 7.92172 12.1716 7.17157C12.9217 6.42143 13.9391 6 15 6L22 6' stroke='#5C5772' stroke-linecap='round' stroke-linejoin='round')
+
+
+mixin arrow-right-svg 
+  svg(class=attributes.class width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M12.025 4.94168L17.0833 10M17.0833 10L12.025 15.0583M17.0833 10L2.5 10' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round')
+
+
+mixin small-arrow-svg 
+  svg(class=attributes.class width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M14.5 21L5.5 12L14.5 3' stroke='#0B1226' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+
+mixin white-next-arrow-svg 
+  svg(class=attributes.class viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M22.025 14.9417L27.0833 20M27.0833 20L22.025 25.0583M27.0833 20L12.5 20' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round')
+
+
+mixin blue-next-arrow-gradient-svg 
+  svg(class=attributes.class width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+    rect(class="white-rect" width='40' height='40' rx='12' fill='#0070B8')
+    rect(class="gradient-rect" width='40' height='40' rx='12' fill='url(#paint0_linear_1289_4207)')
+    path(d='M22.025 14.9417L27.0833 20M27.0833 20L22.025 25.0583M27.0833 20L12.5 20' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round')
+    defs
+      lineargradient#paint0_linear_1289_4207(x1='20' y1='0' x2='20' y2='40' gradientunits='userSpaceOnUse')
+        stop(stop-color='#0070B8')
+        stop(offset='1' stop-color='#8ECCEF')
+
+
+mixin map-icon-svg 
+  svg(class=attributes.class xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewbox='0 0 32 32' fill='none')
+    path(d='M16 26.6666C16 26.6666 24 20.9231 24 13.5384C24 11.3623 23.1571 9.2753 21.6569 7.73654C20.1566 6.19778 18.1217 5.33331 16 5.33331C13.8783 5.33331 11.8434 6.19778 10.3431 7.73654C8.84285 9.2753 8 11.3623 8 13.5384C8 20.9231 16 26.6666 16 26.6666Z' stroke='#0B1226' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+    circle(cx='15.9999' cy='13.3334' r='2.66667' stroke='#0B1226' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+mixin list-svg 
+  svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+    path(d='M9 17H19' stroke='#0B1226' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M5 17H5.002V17.002H5V17Z' stroke='#0B1226' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M9 12H19' stroke='#0B1226' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M5 12H5.002V12.002H5V12Z' stroke='#0B1226' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M9 7H19' stroke='#0B1226' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M5 7H5.002V7.002H5V7Z' stroke='#0B1226' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+
+
+mixin site-link 
+  svg(class=attributes.class xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M11.4441 9.22313L10.3341 8.11313L12.5541 5.89313C14.0867 4.36054 16.5715 4.36054 18.1041 5.89313C19.6367 7.42572 19.6367 9.91054 18.1041 11.4431L15.8841 13.6631L14.7741 12.5531L16.9941 10.3331C17.9137 9.41358 17.9137 7.92269 16.9941 7.00313C16.0746 6.08358 14.5837 6.08358 13.6641 7.00313L11.4441 9.22313ZM12.5541 14.7731L13.6641 15.8831L11.4441 18.1031C9.91155 19.6357 7.42673 19.6357 5.89414 18.1031C4.36155 16.5705 4.36155 14.0857 5.89414 12.5531L8.11414 10.3331L9.22414 11.4431L7.00414 13.6631C6.08459 14.5827 6.08459 16.0736 7.00414 16.9931C7.9237 17.9127 9.41459 17.9127 10.3341 16.9931L12.5541 14.7731ZM8.66913 14.2181L9.77913 15.3281L15.3291 9.77813L14.2191 8.66813L8.66913 14.2181Z' fill='#02343B')

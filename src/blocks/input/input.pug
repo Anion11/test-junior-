@@ -1,0 +1,6 @@
+mixin input(name)
+  .input-wrapper(data-input-parent='')
+    .input-wrapper__placeholder
+      |#{attributes.placeholder}
+    input.input(data-input='' required autocomplete="off" name=name?name:'')&attributes(attributes)
+    +reset.input-wrapper-svg

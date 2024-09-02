@@ -1,0 +1,51 @@
+mixin button(text, isButton)
+  if isButton
+    button.button&attributes(attributes)
+      .button__text
+        |#{text}
+      .button__icon
+        +arrow-right-svg.button__svg
+  else
+    a.button(href="#" target="blank")&attributes(attributes)
+      .button__text
+        |#{text}
+      .button__icon
+        +arrow-right-svg.button__svg
+
+mixin icon-button(text) 
+  +hover-gradient-border(class=attributes.class)&attributes(attributes)
+    .icon-button
+      .icon-button__icon 
+        block
+      p.icon-button__text=text
+
+mixin slider-buttons-gradient(prev, next)
+  .slider-buttons.slider-buttons_gradient(data-slider-buttons='')&attributes(attributes)
+    .slider-buttons__item
+      button.slider-buttons__button(data-slider-button=prev)
+        +hover-gradient-border
+          +small-arrow-svg.slider-buttons__svg
+    .slider-buttons__item 
+      button.slider-buttons__button(data-slider-button=next)
+        +hover-gradient-border
+          +small-arrow-svg.slider-buttons__svg.right
+
+mixin hover-gradient-border(mods)
+  .hover-border(class=attributes.class data-block-border='')
+    .hover-content 
+      block
+
+
+mixin next-page-link(title)
+  a.next-page(href="#" class=attributes.class)
+    .next-page__inner
+      p.next-page__title.title-32=title
+      .next-page__icon
+        +blue-next-arrow-gradient-svg
+
+mixin next-page-link-gradient(title)
+  a.next-page(href="#" class=attributes.class)
+    .next-page__inner
+      p.next-page__title.title-32=title
+      .next-page__icon.next-page__icon_gradient.button--hover-gradient
+        +white-next-arrow-svg 

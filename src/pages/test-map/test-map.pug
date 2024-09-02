@@ -1,0 +1,167 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageName = 'test-map'
+    const pageTitle = 'test-map'
+
+block content
+  main
+    section.map 
+      .map-wrapper 
+          .map-col.map-wrapper__marks
+              .map-wrapper__filter
+                  .select-wrapper 
+                      .select
+                          select.select__select(width='100%')
+                              each item in ['Moscow', 'Voroneshz', 'Novosibirsk']
+                                  option(value=item)
+                                      |#{item}
+              .marks-list.map-wrapper__marks-list(data-scroll="")
+                  .mark.marks-list__item(data-cord="55.69289651935801 37.734255932588425" data-mark="1")
+                      .mark-title RIALTO
+                      .mark-street г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+                      .mark-phone
+                          .mark-phone__link
+                              a(href="tel:375296170973") +375 29 617-09-73
+                          .mark-phone__link
+                              a(href="tel:375296170973") +375 29 617-09-73
+                      .mark-contact
+                          .mark-time.mark-contact__time
+                              .mark-time-col
+                                  .mark-contact__time-top ПНД — ПТ
+                                  .mark-contact__time-bot 10–19
+                              .mark-time-col
+                                  .mark-contact__time-top СБ
+                                  .mark-contact__time-bot 11–18
+                          a.mark-site.mark-contact__site(href="#")
+                              .mark-site__icon
+                                  +site-link.site-link-svg
+                              .mark-site__text сайт
+                      .mark-salons 
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Официальный дистрибьютор
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Есть экспозиция
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Салон, где можно сделать заказ
+                      .mark-underline
+                      .mark-places 
+                          ul.mark-places__list
+                              li.mark-places__list-item Салон
+                              li.mark-places__list-item Шоурум
+                              li.mark-places__list-item Магазин
+                  .mark.marks-list__item(data-cord="55.79289651935801 37.834255932588425" data-mark="2")
+                      .mark-title Ideal Standard International
+                      .mark-street г. Москва, Нижняя Сыромятническая 10. Артплей строение 7 этаж 1
+                      .mark-phone
+                          .mark-phone__link
+                              a(href="tel:375296170973") 8 (495) 640-09-20
+                          .mark-phone__link
+                              a.mark-phone__link--dop(href="#") 8 (926) 640-01-91
+                              span  — факс
+                          .mark-phone__link
+                              a.mark-phone__link--dop(href="") 8 (926) 640-01-91 
+                              span  — tg, wh, viber
+                      .mark-contact
+                          .mark-time.mark-contact__time
+                              .mark-time-col
+                                  .mark-contact__time-top ПНД — ПТ
+                                  .mark-contact__time-bot 10–19
+                              .mark-time-col
+                                  .mark-contact__time-top СБ
+                                  .mark-contact__time-bot 11–18
+                          a.mark-site.mark-contact__site(href="#")
+                              .mark-site__icon
+                                  +site-link.site-link-svg
+                              .mark-site__text сайт
+                      .mark-salons 
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Официальный дистрибьютор
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Есть экспозиция
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Салон, где можно сделать заказ
+                      .mark-underline
+                      .mark-places 
+                          ul.mark-places__list
+                              li.mark-places__list-item Салон
+                              li.mark-places__list-item Шоурум
+                              li.mark-places__list-item Магазин
+                  .mark.marks-list__item(data-cord="55.99289651935801 37.434255932588425" data-mark="3")
+                      .mark-title RIALTO
+                      .mark-street г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+                      .mark-phone
+                          .mark-phone__link
+                              a(href="tel:375296170973") +375 29 617-09-73
+                          .mark-phone__link
+                              a(href="tel:375296170973") +375 29 617-09-73
+                      .mark-contact
+                          .mark-time.mark-contact__time
+                              .mark-time-col
+                                  .mark-contact__time-top ПНД — ПТ
+                                  .mark-contact__time-bot 10–19
+                              .mark-time-col
+                                  .mark-contact__time-top СБ
+                                  .mark-contact__time-bot 11–18
+                          a.mark-site.mark-contact__site(href="#")
+                              .mark-site__icon
+                                  +site-link.site-link-svg
+                              .mark-site__text сайт
+                      .mark-salons 
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Официальный дистрибьютор
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Есть экспозиция
+                          .mark-salons__item
+                              .mark-salons__item-icon
+                                  img(src="/images/mark.png", alt="mark")
+                              .mark-salons__item-text Салон, где можно сделать заказ
+                      .mark-underline
+                      .mark-places 
+                          ul.mark-places__list
+                              li.mark-places__list-item Салон
+                              li.mark-places__list-item Шоурум
+                              li.mark-places__list-item Магазин
+          .map-col.map-wrapper__map
+              #map
+      .map-others
+          <input type="button" id="destroyButton" value="Удалить карту"/>
+          ul.coord-list 
+              li.coord-item 
+                  .coord-item__content 55.69289651935801 
+                  .coord-item__content 37.734255932588425
+                  .coord-item__title qweweq
+              li.coord-item
+                  .coord-item__content 51.90
+                  .coord-item__content 38.37
+                  .coord-item__title qweweq1
+              li.coord-item
+                  .coord-item__content 51.98
+                  .coord-item__content 38.37
+                  .coord-item__title qweweq2
+          .mark-wrapper 
+              .mark-title RIALTO
+              .mark-street г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+              .mark-phone
+                  .mark-phone__link
+                      a(href="tel:375296170973") +375 29 617-09-73
+                  .mark-phone__link
+                      a(href="tel:375296170973") +375 29 617-09-73
+

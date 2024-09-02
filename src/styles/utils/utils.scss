@@ -1,0 +1,30 @@
+@mixin styled-scrollbar-spoiler($scrollbar-bg: #e4e4e4, $size: rem(4px)) {
+  scrollbar-track-color: $scrollbar-bg;
+  scrollbar-darkshadow-color: $scrollbar-bg;
+  scrollbar-3dlight-color: $scrollbar-bg;
+
+  scrollbar-arrow-color: #8eccef;
+
+  scrollbar-highlight-color: #8eccef;
+  scrollbar-shadow-color: #8eccef;
+  scrollbar-face-color: #8eccef;
+
+  // firefox
+
+  scrollbar-width: thin;
+  scrollbar-color: #8eccef $scrollbar-bg;
+
+  // chrome, edge, opera, safari
+
+  &::-webkit-scrollbar {
+    width: $size;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-bg;
+  }
+  &::-webkit-scrollbar-thumb {
+    // margin: 4px 0;
+
+    background-color: #8eccef;
+  }
+}

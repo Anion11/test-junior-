@@ -1,0 +1,220 @@
+.about{ 
+
+
+  &-history{
+    margin-top: rem(120px);
+
+    @media #{media('<',d)} {
+      margin-top: rem(48px);
+    }
+
+    &__wrapper{
+      @media #{media('<',m)} {
+        border-bottom: 1px solid #E4E4E4;
+      }
+    }
+
+    &__btns{
+      margin-top: rem(80px);
+      display: flex;
+      align-items: start;
+      gap: rem(60px);
+
+      border-bottom: 1px solid #E4E4E4;
+
+      @media #{media('<',d)} {
+        margin-top: rem(24px);
+        gap: rem(16px);
+      }
+
+      @media #{media('<',m)} {
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: calc(100% + rem(32px));
+        @include scrollbar-hidden();
+        border: none;
+
+        margin-left: rem(-16px);
+        padding-left: rem(16px);
+        padding-right: rem(16px);
+      }
+
+    }
+
+    &__btn{
+      padding-bottom: rem(12px);
+      transition: $transition;
+      cursor: pointer;
+      color: #747884;
+
+
+      @media #{media('>',t)} and (hover: hover) and (pointer: fine) {&:hover {
+        color: #0070B8;
+      }}
+
+      &.active{
+        border-bottom: 4px solid #0070B8;
+        color: #0070B8;
+        font-weight: 600;
+        padding-bottom: rem(8px);
+
+        @media #{media('<',d)} {
+          border-width: 2px;
+          padding-bottom: rem(10px);
+        }
+        @media #{media('<',m)} {  
+          border-width: 3px;
+        }
+      }
+
+      @media #{media('<',d)} {
+        font-size: rem(16px);
+        line-height: rem(22.4px);
+      }
+    }
+
+    &__sliders{
+      margin-top: rem(60px);
+      display: flex;
+      align-items: start;
+      gap: calc(#{$col-gap-d});
+
+      @media #{media('<',d)} {
+        margin-top: rem(24px);
+        flex-direction: column;
+        gap: 0px;
+      }
+    }
+
+    &__col{
+      &.years{
+        width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: rem(458px);
+
+        @media #{media('<',d)} {
+          height: auto;
+          flex-direction: row;
+          width: 100%;
+
+          .swiper{
+            width: rem(200px);
+          }
+        }
+      }
+
+      &.images{
+        width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+        height: rem(458px);
+
+        @media #{media('<',d)} {
+          width: 100%;
+          height: rem(446px);
+          margin-top: rem(16px);
+        }
+
+        @media #{media('<',m)} {
+          height: rem(212px);
+        }
+      }
+
+      &.texts{
+
+        width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+        margin-left:  calc(#{$col-part-d} * 1);
+        height: rem(458px);
+
+        @media #{media('<',d)} {
+          margin-top: rem(24px);
+          height: auto;
+          width: 100%;
+          margin-left: 0px;
+        }
+
+        .swiper-slide{
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          height: rem(458px);
+
+          @media #{media('<',d)} {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &__images{
+      border-radius: rem(20px);
+      overflow: hidden;
+
+      &-slide{
+        height: rem(458px);
+
+        @media #{media('<',d)} {
+          width: 100%;
+          height: rem(446px);
+        }
+
+        @media #{media('<',m)} {
+          height: rem(212px);
+        }
+      }
+    }
+
+    &__texts{
+      @media #{media('<',d)} {
+        overflow: hidden;
+      }
+      &-paragraph{
+        margin-top: rem(20px);
+
+        &:empty{
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  &-next{
+    margin-top: rem(120px);
+
+    @media #{media('<',d)} {
+      margin-top: rem(48px);
+    }
+
+    &__links{
+      margin-top: rem(60px);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(20px);
+
+      @media #{media('<',d)} {
+        margin-top: rem(24px);
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem(12px);
+      }
+
+      .hover-border{
+        width: 100%;
+
+        &:hover{
+          .next-page__icon_gradient{
+            &::after{
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  &__minititle{
+    @media #{media('<',d)} {
+      line-height: 100%;
+    }
+  }
+}     
